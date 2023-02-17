@@ -11,9 +11,32 @@ function checkWinner() {
 	for (let i = 0; i < player2.length; i++) {
 		listPlayer2.push(Number(player2[i].id));
 	}
-	console.log(`List 1 = ${listPlayer1}`);
-	console.log(`List 2 = ${listPlayer2}`);
+	for (let i = 0; i < listPlayer1.length; i++) {
+		let status = checkPattern(listPlayer1[i], listPlayer1);
+		if (status == "Win") {
+			alert("Player 1 Win");
+		}
+	}
+	for (let i = 0; i < listPlayer2.length; i++) {
+		let status = checkPattern(listPlayer2[i], listPlayer2);
+		if (status == "Win") {
+			alert("Player 2 Win");
+		}
+	}
 }
+
+function checkPattern(int, list) {
+	if (list.includes(int - 4) && list.includes(int - 8)) {
+		return "Win";
+	} else if (list.includes(int - 3) && list.includes(int - 6)) {
+		return "Win";
+	} else if (list.includes(int - 2) && list.includes(int - 4)) {
+		return "Win";
+	} else if (list.includes(int - 1) && list.includes(int - 2)) {
+		return "Win";
+	}
+}
+
 window.onload = checkWinner();
 document.addEventListener("click", (e) => {
 	let elementId = e.target.id;
