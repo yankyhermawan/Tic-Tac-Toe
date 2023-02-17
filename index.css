@@ -1,0 +1,26 @@
+* {
+	width: 100%;
+	margin: 0;
+}
+:root {
+	font-size: 16px;
+}
+
+.grid-container {
+	display: grid;
+}
+
+.main-container {
+	width: fit-content;
+
+	margin: 10% auto;
+	grid-template-columns: repeat(3, 100px);
+	grid-template-rows: repeat(3, 100px);
+	gap: 5px;
+}
+.box {
+	align-self: center;
+	background-color: antiquewhite;
+	font-size: 3.5em;
+	height: 100px;
+}
