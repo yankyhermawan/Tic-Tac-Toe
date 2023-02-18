@@ -41,7 +41,10 @@ function checkWinner(id) {
 			listHighPlayer1
 		);
 		if (status == "Win") {
-			alert("Player 1 Win");
+			var r = confirm("Player 1 Win");
+			if (r == true) {
+				window.location.reload();
+			}
 		}
 	}
 	for (let i = 0; i < listPlayer2.length; i++) {
@@ -52,7 +55,10 @@ function checkWinner(id) {
 			listHighPlayer2
 		);
 		if (status == "Win") {
-			alert("Player 2 Win");
+			var r = confirm("Player 1 Win");
+			if (r == true) {
+				window.location.reload();
+			}
 		}
 	}
 }
