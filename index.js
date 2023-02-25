@@ -97,15 +97,17 @@ function checkPattern(int, listLow, listMid, listHigh) {
 // 	}
 // });
 
-function reply_click(id) {
+function reply_click(id, className) {
 	turn += 1;
-	if (turn % 2 == 0) {
-		player = "X";
-		playerName = "player2";
-	} else {
-		player = "O";
-		playerName = "player1";
+	if (className.includes("player") == false) {
+		if (turn % 2 == 0) {
+			player = "X";
+			playerName = "player2";
+		} else {
+			player = "O";
+			playerName = "player1";
+		}
+		document.getElementById(`${id}`).innerHTML = player;
+		document.getElementById(`${id}`).classList.add(playerName);
 	}
-	document.getElementById(`${id}`).innerHTML = player;
-	document.getElementById(`${id}`).classList.add(playerName);
 }
