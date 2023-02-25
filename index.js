@@ -45,6 +45,7 @@ function checkWinner(id) {
 			if (r == true) {
 				window.location.reload();
 			}
+break;
 		}
 	}
 	for (let i = 0; i < listPlayer2.length; i++) {
@@ -59,6 +60,7 @@ function checkWinner(id) {
 			if (r == true) {
 				window.location.reload();
 			}
+break;
 		}
 	}
 }
