@@ -45,7 +45,7 @@ function checkWinner(id) {
 			if (r == true) {
 				window.location.reload();
 			}
-break;
+			break;
 		}
 	}
 	for (let i = 0; i < listPlayer2.length; i++) {
@@ -60,7 +60,7 @@ break;
 			if (r == true) {
 				window.location.reload();
 			}
-break;
+			break;
 		}
 	}
 }
@@ -80,24 +80,6 @@ function checkPattern(int, listLow, listMid, listHigh) {
 		return "Win";
 	}
 }
-
-// document.addEventListener("click", (e) => {
-// 	let elementId = e.target.id;
-// 	if (document.getElementById(`${elementId}`).classList.length == 1) {
-// 		if (elementId != "") {
-// 			turn += 1;
-// 			if (turn % 2 == 0) {
-// 				player = "X";
-// 				playerName = "player2";
-// 			} else {
-// 				player = "O";
-// 				playerName = "player1";
-// 			}
-// 			document.getElementById(`${elementId}`).innerHTML = player;
-// 			document.getElementById(`${elementId}`).classList.add(playerName);
-// 		}
-// 	}
-// });
 
 function reply_click(id, className) {
 	turn += 1;
